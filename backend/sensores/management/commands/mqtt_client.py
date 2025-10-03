@@ -1,7 +1,7 @@
 import json
 import paho.mqtt.client as mqtt
 
-BROKER_HOST = "localhost"   # cambiar por la IP/host real del broker
+BROKER_HOST = "10.102.0.20"   # cambiar por la IP/host real del broker
 BROKER_PORT = 1883
 TOPIC_COMANDO = "/comando_bomba"
 
