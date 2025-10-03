@@ -40,3 +40,12 @@ class NivelAgua(models.Model):
 
     def __str__(self):
         return f"Nivel {self.distancia} cm @ {self.ts_server}"
+
+class SensorConfig(models.Model):
+    sensor_id = models.CharField(max_length=50, unique=True)
+    planta = models.CharField(max_length=100)
+    sector = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.planta} ({self.sector}) - {self.sensor_id}"
+

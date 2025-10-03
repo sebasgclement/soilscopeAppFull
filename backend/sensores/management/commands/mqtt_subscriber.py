@@ -5,7 +5,7 @@ from django.utils import timezone
 from sensores.models import HumedadTierra, Ambiente, EstadoBomba, NivelAgua
 
 
-BROKER_HOST = "localhost"   # 👈 cambiar cuando Tobi tenga la IP/host real
+BROKER_HOST = "localhost"   # cambiar por la IP/host real
 BROKER_PORT = 1883          # puerto por defecto
 TOPICS = [("/humedad", 0), ("/ambiente", 0), ("/estado_bomba", 0), ("/nivel_agua", 0)]
 

@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import HumedadTierra, Ambiente, EstadoBomba, NivelAgua
+from .models import SensorConfig
 
 class HumedadTierraSerializer(serializers.ModelSerializer):
     class Meta:
@@ -22,4 +23,9 @@ class EstadoBombaSerializer(serializers.ModelSerializer):
 class NivelAguaSerializer(serializers.ModelSerializer):
     class Meta:
         model = NivelAgua
+        fields = "__all__"
+
+class SensorConfigSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SensorConfig
         fields = "__all__"

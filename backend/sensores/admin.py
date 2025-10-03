@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import HumedadTierra, Ambiente, EstadoBomba, NivelAgua
+from .models import SensorConfig
 
 # Register your models here.
 
@@ -19,3 +20,7 @@ class EstadoBombaAdmin(admin.ModelAdmin):
 @admin.register(NivelAgua)
 class NivelAguaAdmin(admin.ModelAdmin):
     list_display = ("distancia", "ts_sensor", "ts_server")
+
+@admin.register(SensorConfig)
+class SensorConfigAdmin(admin.ModelAdmin):
+    list_display = ("sensor_id", "planta", "sector")
